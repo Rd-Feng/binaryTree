@@ -43,9 +43,6 @@ public:
 };
 
 template<class T>
-treeNode<T>::treeNode() {}
-
-template<class T>
 treeNode<T>::treeNode(T data) : data(data) { }
 
 template<class T>

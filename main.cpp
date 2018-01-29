@@ -9,7 +9,7 @@ private:
 public:
     explicit Integer(int i) : i(i){}
     int getInt(){return i;}
-    int setInt(int i){this->i = i;}
+    void setInt(int i){this->i = i;}
 };
 
 int main(){
@@ -30,7 +30,7 @@ int main(){
     t[1]->setRight(t[4]);
     t[2]->setRight(t[5]);
     t[3]->setLeft(t[6]);
-    t[6]->setRight(new treeNode<Integer>{Integer(100)});
+    t[6]->setRight(new treeNode<Integer>(Integer(100)));
 
     int height = tree.getHeight();
 
