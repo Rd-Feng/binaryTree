@@ -28,7 +28,7 @@ int main(){
     t[3]->setLeft(t[6]);
     t[6]->setRight(new treeNode<Integer>(Integer(100)));
 
-    int height = tree.getHeight();
-    cout << height << endl;
+    int num = tree.getNumberOfNodes();
+    cout << num << endl;
     return 0;
 }

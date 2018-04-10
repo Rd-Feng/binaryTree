@@ -77,7 +77,16 @@ int getNodeNumHelper(treeNode<T> *root) {
 }
 
 template<class T>
-int binaryTree<T>::getNumberOfNodes() const { return getNodeNumHelper(root); }
+int binaryTree<T>::getNumberOfNodes() const {
+    if(root == nullptr){
+        return 0;
+    }
+    else{
+        binaryTree<T> leftTree = binaryTree<T>(this->root->getLeft());
+        binaryTree<T> rightTree = binaryTree<T>(this->root->getRight());
+        return 1 + leftTree.getNumberOfNodes() + rightTree.getNumberOfNodes();
+    }
+}
 
 template<class T>
 void clearHelper(treeNode<T> *subRoot) {
