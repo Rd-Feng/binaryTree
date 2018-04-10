@@ -3,22 +3,13 @@
 
 using namespace std;
 
-class Integer{
-private:
-    int i;
-public:
-    explicit Integer(int i) : i(i){}
-    int getInt(){return i;}
-    void setInt(int i){this->i = i;}
-};
-
 int main(){
-    treeNode<Integer>* t[7];
+    treeNode<int>* t[7];
     for(int i = 0; i < 7; i++){
-        t[i] = new treeNode<Integer>(Integer(i + 1));
+        t[i] = new treeNode<int>(i+1);
     }
 
-    binaryTree<Integer> tree = binaryTree<Integer>(t[0]);
+    binaryTree<int> tree = binaryTree<int>(t[0]);
 
     t[0]->setLeft(t[1]);
     t[0]->setRight(t[2]);
@@ -26,9 +17,9 @@ int main(){
     t[1]->setRight(t[4]);
     t[2]->setRight(t[5]);
     t[3]->setLeft(t[6]);
-    t[6]->setRight(new treeNode<Integer>(Integer(100)));
+    t[6]->setRight(new treeNode<int>(100));
 
-    int num = tree.getNumberOfNodes();
-    cout << num << endl;
+    treeNode<int> *found = tree.getEntry(1000);
+    cout << found->getData() << endl;
     return 0;
 }

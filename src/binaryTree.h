@@ -27,7 +27,7 @@ public:
 
     void clear();
 
-    T getEntry(const T &anEntry) const;
+    treeNode<T>* getEntry(const T &anEntry) const;
 
     bool contains(const T &anEntry) const;
 
@@ -63,17 +63,6 @@ int binaryTree<T>::getHeight() const {
         binaryTree<T> rightTree = binaryTree<T>(this->root->getRight());
         return 1 + max(leftTree.getHeight(), rightTree.getHeight());
     }
-    //return getHeightHelper(root);
-}
-
-template<class T>
-int getNodeNumHelper(treeNode<T> *root) {
-    if (root == nullptr) {
-        return 0;
-    }
-    else {
-        return 1 + getNodeNumHelper(root->getLeft()) + getNodeNumHelper(root->getRight());
-    }
 }
 
 template<class T>
@@ -102,12 +91,35 @@ void clearHelper(treeNode<T> *subRoot) {
 }
 
 template<class T>
-void binaryTree<T>::clear() { clearHelper(root); }
+void binaryTree<T>::clear() {
+    if (root == nullptr) {
+        return;
+    }
+    else {
+        binaryTree<T> leftTree = binaryTree<T>(this->root->getLeft());
+        binaryTree<T> rightTree = binaryTree<T>(this->root->getRight());
+        leftTree.clear();
+        rightTree.clear();
+        delete root;
+        return;
+    }
+}
 
 template <class T>
-T getEntry(const T &anEntry){
-    /*
-     * recursive helper function
-     */
-    return NULL;
+treeNode<T>* binaryTree<T>::getEntry(const T &anEntry) const {
+    if(root == nullptr){
+        return NULL; // error?
+    }
+    else if(root->getData() == anEntry){
+        return root;
+    }
+    else{
+        binaryTree<T> leftTree = binaryTree<T>(this->root->getLeft());
+        binaryTree<T> rightTree = binaryTree<T>(this->root->getRight());
+        treeNode<T> *candidate = leftTree.getEntry(anEntry);
+        if(candidate == nullptr){
+            candidate = rightTree.getEntry(anEntry);
+        }
+        return candidate; // can be null
+    }
 }
