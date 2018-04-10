@@ -12,7 +12,6 @@ class binaryTree {
 private:
     treeNode<T> *root = nullptr;
 public:
-    binaryTree<T>();
 
     explicit binaryTree<T>(treeNode<T> *root);
 
@@ -32,15 +31,13 @@ public:
 
     bool contains(const T &anEntry) const;
 
-    void preorderTraverse(void visit(T &)) const;
+    void preorderTraverse(treeNode<T>* root) const;
 
-    void inorderTraverse(void visit(T &)) const;
+    void inorderTraverse(treeNode<T>* root) const;
 
-    void postorderTraverse(void visit(T &)) const;
+    void postorderTraverse(treeNode<T>* root) const;
 };
 
-template<class T>
-binaryTree<T>::binaryTree() : root(nullptr) { }
 
 template<class T>
 binaryTree<T>::binaryTree(treeNode<T> *root) : root(root) { }
@@ -57,17 +54,17 @@ template<class T>
 bool binaryTree<T>::isEmpty() const { return root == nullptr; }
 
 template<class T>
-int getHeightHelper(treeNode<T> *root) {
-    if (root == nullptr) {
+int binaryTree<T>::getHeight() const {
+    if(root == nullptr){
         return 0;
     }
-    else {
-        return 1 + max(getHeightHelper(root->getLeft()), getHeightHelper(root->getRight()));
+    else{
+        binaryTree<T> leftTree = binaryTree<T>(this->root->getLeft());
+        binaryTree<T> rightTree = binaryTree<T>(this->root->getRight());
+        return 1 + max(leftTree.getHeight(), rightTree.getHeight());
     }
+    //return getHeightHelper(root);
 }
-
-template<class T>
-int binaryTree<T>::getHeight() const { return getHeightHelper(root); }
 
 template<class T>
 int getNodeNumHelper(treeNode<T> *root) {
@@ -97,3 +94,11 @@ void clearHelper(treeNode<T> *subRoot) {
 
 template<class T>
 void binaryTree<T>::clear() { clearHelper(root); }
+
+template <class T>
+T getEntry(const T &anEntry){
+    /*
+     * recursive helper function
+     */
+    return NULL;
+}

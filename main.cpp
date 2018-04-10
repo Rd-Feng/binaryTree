@@ -18,10 +18,6 @@ int main(){
         t[i] = new treeNode<Integer>(Integer(i + 1));
     }
 
-    for(int i = 0; i < 7; i++){
-        cout << t[i]->getData().getInt() << endl;
-    }
-
     binaryTree<Integer> tree = binaryTree<Integer>(t[0]);
 
     t[0]->setLeft(t[1]);
@@ -33,7 +29,6 @@ int main(){
     t[6]->setRight(new treeNode<Integer>(Integer(100)));
 
     int height = tree.getHeight();
-
-    cout << "height is " << height << endl;
+    cout << height << endl;
     return 0;
 }

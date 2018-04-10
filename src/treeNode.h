@@ -17,7 +17,6 @@ private:
     treeNode<T> *right = nullptr;
 public:
     //constructor
-    treeNode<T>();
 
     explicit treeNode<T>(T);
 
