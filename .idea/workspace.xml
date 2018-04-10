@@ -12,9 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6e40a80-baa4-48db-a247-2e193f14cb78" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/binaryTree.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/binaryTree.dir/main.cpp.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/binaryTree" afterPath="$PROJECT_DIR$/cmake-build-debug/binaryTree" />
       <change beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
       <change beforePath="$PROJECT_DIR$/src/binaryTree.h" afterPath="$PROJECT_DIR$/src/binaryTree.h" />
     </list>
@@ -48,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+            <state relative-caret-position="225">
+              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -60,14 +57,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="binaryTree.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="binaryTree.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/binaryTree.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="116" column="36" lean-forward="false" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
+            <state relative-caret-position="314">
+              <caret line="130" column="1" lean-forward="true" selection-start-line="130" selection-start-column="1" selection-end-line="130" selection-end-column="1" />
               <folding>
                 <element signature="e#1432#1441#0" expanded="true" />
                 <element signature="e#2393#2402#0" expanded="true" />
+                <element signature="e#2966#2975#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -178,12 +176,12 @@
       <workItem from="1517259223640" duration="73000" />
       <workItem from="1517259312900" duration="3328000" />
       <workItem from="1518309961459" duration="2100000" />
-      <workItem from="1523392048642" duration="3062000" />
+      <workItem from="1523392048642" duration="3215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10015000" />
+    <option name="totallyTimeSpent" value="10168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1280" height="714" extended-state="6" />
@@ -257,6 +255,7 @@
           <folding>
             <element signature="e#1432#1441#0" expanded="true" />
             <element signature="e#2393#2402#0" expanded="true" />
+            <element signature="e#2966#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -295,6 +294,7 @@
           <folding>
             <element signature="e#1432#1441#0" expanded="true" />
             <element signature="e#2393#2402#0" expanded="true" />
+            <element signature="e#2966#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -393,6 +393,7 @@
           <folding>
             <element signature="e#1432#1441#0" expanded="true" />
             <element signature="e#2393#2402#0" expanded="true" />
+            <element signature="e#2966#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -473,23 +474,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/src/binaryTree.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="314">
+          <caret line="130" column="1" lean-forward="true" selection-start-line="130" selection-start-column="1" selection-end-line="130" selection-end-column="1" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1432#1441#0" expanded="true" />
+            <element signature="e#2393#2402#0" expanded="true" />
+            <element signature="e#2966#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/binaryTree.h">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="116" column="36" lean-forward="false" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
+        <state relative-caret-position="225">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <element signature="e#1432#1441#0" expanded="true" />
-            <element signature="e#2393#2402#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

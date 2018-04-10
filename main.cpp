@@ -19,7 +19,7 @@ int main(){
     t[3]->setLeft(t[6]);
     t[6]->setRight(new treeNode<int>(100));
 
-    treeNode<int> *found = tree.getEntry(1000);
-    cout << found->getData() << endl;
+
+    cout << tree.contains(100) << endl;
     return 0;
 }

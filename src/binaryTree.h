@@ -123,3 +123,9 @@ treeNode<T>* binaryTree<T>::getEntry(const T &anEntry) const {
         return candidate; // can be null
     }
 }
+
+template<class T>
+bool binaryTree<T>::contains(const T &anEntry) const {
+    treeNode<T> *candidate = getEntry(anEntry);
+    return candidate != nullptr;
+}
